@@ -1,0 +1,102 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>我的隐藏天赋报告</title><style>
+*{box-sizing:border-box}
+body{margin:0;background:#FFF5D1;color:#2b2a33;font-family:-apple-system,"PingFang SC","Microsoft YaHei","Noto Sans CJK SC","Source Han Sans SC","Helvetica Neue",sans-serif;line-height:1.75;-webkit-text-size-adjust:100%}
+.wrap{max-width:560px;margin:0 auto;padding:16px 16px 56px}
+.ribbon{background:#fff3cd;color:#7a5a00;border-radius:12px;padding:8px 12px;font-size:13px;margin-bottom:12px;text-align:center}
+.hero{background:#fff;border-radius:30px;padding:22px 18px 22px;text-align:center;box-shadow:0 6px 24px rgba(60,40,30,.10);position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;left:50%;top:44px;width:300px;height:300px;margin-left:-150px;border-radius:50%;background:#f5ecd1}
+.hero .k{position:relative;display:inline-block;background:#C99700;color:#fff;border-radius:99px;padding:2px 14px;font-size:12px;letter-spacing:.12em}
+.stage{position:relative;width:250px;height:300px;margin:6px auto 0}
+.stage svg{position:relative;width:200px;display:block;margin:0 auto}
+.hero .name{position:relative;font-family:"Yuanti SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC","Source Han Sans SC","WenQuanYi Micro Hei",sans-serif;font-size:38px;font-weight:700;color:#6e5300;line-height:1.2;margin-top:2px}
+.hero .sub{position:relative;font-size:13px;color:#C99700;letter-spacing:.18em;margin-top:2px}
+.bubble{position:relative;display:inline-block;margin-top:12px;background:#f5ecd1;border:2px solid #C99700;border-radius:18px;padding:5px 16px;font-size:15px;color:#6e5300;font-weight:600}
+.tag{position:relative;margin-top:12px;font-size:15px;color:#555}
+.chips{position:relative;margin-top:12px;display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+.chips span{background:#f5ecd1;color:#6e5300;border-radius:99px;padding:2px 11px;font-size:12px}
+h2{font-family:"Yuanti SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC","Source Han Sans SC","WenQuanYi Micro Hei",sans-serif;font-size:22px;margin:30px 4px 4px;color:#6e5300}
+.lead{margin:0 4px 12px;color:#777;font-size:13px}
+.card{background:#fff;border-radius:22px;padding:16px 18px;margin-bottom:12px;box-shadow:0 2px 12px rgba(60,40,30,.07)}
+.card h3{margin:2px 0 6px;font-size:18px;line-height:1.4;color:#6e5300}
+.badges{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:4px}
+.badge{font-size:11px;border-radius:99px;padding:1px 9px;background:#f0eef3;color:#6a6878}
+.badge.star{background:#C99700;color:#fff;font-weight:700}
+.badge.guess{background:#eef3ff;color:#4a63a8}
+p{margin:0 0 8px}
+.flow{font-size:14.5px}
+.mute{color:#9a97a6;font-size:12px;margin-right:2px}
+.arrow{color:#C99700;font-weight:700;margin:0 4px}
+ul{margin:0 0 8px;padding-left:18px}
+li{margin:2px 0;font-size:14px}
+.ev li{color:#5b5868}
+.try{background:#f5ecd1;border-radius:12px;padding:8px 12px;font-size:13.5px}
+.try b{display:block;font-size:11px;letter-spacing:.1em;color:#C99700;margin-bottom:1px}
+.ins{border-left:6px solid #C99700}
+.ins .why{font-size:12px;color:#8a8796;margin-top:2px}
+.hd{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.rk{flex:none;width:30px;height:30px;border-radius:50%;background:#C99700;color:#fff;font-weight:800;text-align:center;line-height:30px}
+.hd h3{margin:0;flex:1}
+.tagf{flex:none;font-size:11px;border-radius:99px;padding:1px 9px;background:#f5ecd1;color:#6e5300;font-weight:700}
+.blk{margin-top:8px}
+.blk b{display:block;font-size:11px;letter-spacing:.1em;color:#9a97a6;margin-bottom:1px}
+.blk.warn{background:#fff7e6;border-radius:12px;padding:8px 12px}
+.blk.warn b{color:#b07a00}
+.note{background:#eef3ff;border-radius:14px;padding:10px 14px;font-size:13px;color:#42538a;margin-bottom:12px}
+.avoid li b{color:#6e5300}
+.pair{display:flex;gap:10px;margin-bottom:12px}
+.pair .card{flex:1;margin:0;text-align:center;padding:14px 10px}
+.pair .em{font-size:44px;line-height:1.2}
+.pair .nm{font-family:"Yuanti SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC","Source Han Sans SC","WenQuanYi Micro Hei",sans-serif;font-size:18px;font-weight:700;color:#6e5300}
+.pair .lb{display:inline-block;font-size:11px;border-radius:99px;padding:1px 9px;background:#f5ecd1;color:#6e5300;font-weight:700;margin-bottom:4px}
+.pair .tx{font-size:12.5px;color:#666;text-align:left;margin-top:6px}
+.clash{border:2px dashed #c9c5d3}
+.clash .lb{background:#ece9f2;color:#5b5868}
+.ax{display:flex;align-items:center;gap:8px;margin:4px 0;font-size:12.5px}
+.ax .l{width:86px;text-align:right;color:#666;white-space:nowrap}
+.ax .r{width:86px;color:#666;white-space:nowrap}
+.bar{flex:1;height:8px;border-radius:99px;background:#f5ecd1;overflow:hidden}
+.bar i{display:block;height:100%;background:#C99700}
+.week{background:#C99700;color:#fff;border-radius:22px;padding:16px 18px;margin:12px 0}
+.week b{display:block;font-size:12px;letter-spacing:.12em;opacity:.85;margin-bottom:2px}
+.foot{margin:24px 6px 0;font-size:12px;color:#8a8796;line-height:1.7}
+
+.alarm{background:#ffe9e6;color:#9a3a2a;border-radius:16px;padding:10px 14px;font-size:13.5px;margin-bottom:12px;line-height:1.6}
+.alarm b{display:block;font-size:14.5px;margin-bottom:2px}
+.hero .pname{position:relative;font-family:"Yuanti SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC","Source Han Sans SC","WenQuanYi Micro Hei",sans-serif;font-size:40px;font-weight:700;color:#6e5300;line-height:1.2;margin-top:4px}
+.hero .pline{position:relative;font-size:16px;line-height:1.75;color:#3a3844;margin:10px 4px 0;font-weight:600}
+.hero .milk{position:relative;margin-top:14px;font-size:13px;color:#6a6878}
+.hero .milk b{color:#6e5300}
+.wow{background:#C99700;color:#fff;border-radius:22px;padding:16px 18px;margin:16px 0 0}
+.wow b{display:block;font-size:12px;letter-spacing:.12em;opacity:.85;margin-bottom:4px}
+.wow p{margin:0;font-size:16px;line-height:1.75}
+.sec{background:#fff;border-radius:22px;padding:16px 18px;margin-top:12px;box-shadow:0 2px 12px rgba(60,40,30,.07)}
+.sec>b{display:block;font-family:"Yuanti SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC","Source Han Sans SC","WenQuanYi Micro Hei",sans-serif;font-size:19px;color:#6e5300;margin-bottom:6px}
+.sec p{font-size:15.5px;line-height:1.8;margin:0}
+.sk{display:flex;gap:10px;align-items:baseline;margin:8px 0;font-size:15px;line-height:1.6}
+.sk .n{flex:none;font-weight:700;color:#6e5300;min-width:4.5em}
+.sk .eng{flex:none;font-size:11px;border-radius:99px;padding:0 8px;background:#C99700;color:#fff;white-space:nowrap;align-self:center}
+.sk .t{flex:1}
+.sknote{font-size:13.5px;color:#6a6878;margin-top:8px}
+.sec ul{margin:0;padding-left:18px}
+.sec li{font-size:15px;line-height:1.75}
+.go .pos{font-size:17px;font-weight:700;color:#6e5300;margin-bottom:10px}
+.go .lb{font-size:12px;letter-spacing:.1em;color:#9a97a6;margin:12px 0 6px}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pills span{background:#f5ecd1;color:#6e5300;border-radius:99px;padding:5px 14px;font-size:14.5px;font-weight:600}
+details.appx{margin-top:26px;background:#fff;border-radius:22px;padding:4px 18px;box-shadow:0 2px 12px rgba(60,40,30,.07)}
+details.appx summary{cursor:pointer;padding:12px 0;font-size:14px;color:#6a6878;list-style:none}
+details.appx summary::-webkit-details-marker{display:none}
+details.appx summary:after{content:" ▸";color:#C99700}
+details.appx[open] summary:after{content:" ▾"}
+.appx h4{font-size:14px;color:#6e5300;margin:14px 0 4px}
+.appx li,.appx p{font-size:13px;color:#5b5868;line-height:1.65}
+.abrow{display:flex;align-items:center;gap:8px;margin:6px 0;font-size:12.5px}
+.abrow .n{width:64px;flex:none;color:#6e5300;font-weight:600}
+.abrow .bars{flex:1}
+.abrow .bar2{height:7px;border-radius:99px;background:#f0eef3;overflow:hidden;margin:2px 0}
+.abrow .bar2 i{display:block;height:100%;border-radius:99px}
+.legend{font-size:11.5px;color:#9a97a6;margin-bottom:4px}
+.legend i{display:inline-block;width:10px;height:6px;border-radius:9px;margin:0 3px 1px 8px;vertical-align:middle}
+.mini{display:flex;gap:8px;font-size:13px;color:#5b5868;margin:4px 0}
+.mini b{color:#6e5300}
+</style></head><body><div class="wrap"><div class="ribbon">示例 · 虚构人物和虚构答案，仅用于展示报告样式</div><div class="hero"><div class="k">我的隐藏天赋报告</div><div class="stage"><span style="position:absolute;left:2%;top:14%;font-size:30px;transform:rotate(-14deg)">🍯</span><span style="position:absolute;left:82%;top:6%;font-size:34px;transform:rotate(12deg)">🍯</span><span style="position:absolute;left:-2%;top:62%;font-size:28px;transform:rotate(10deg)">🍯</span><span style="position:absolute;left:86%;top:56%;font-size:30px;transform:rotate(-10deg)">🍯</span><span style="position:absolute;left:14%;top:2%;font-size:28px;color:#C99700">✦</span><span style="position:absolute;left:74%;top:78%;font-size:34px;color:#C99700">✦</span><span style="position:absolute;left:10%;top:84%;font-size:15px;color:#C99700">●</span><svg viewBox="0 0 320 480" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="cclip"><path d="M62 178 L258 178 L236 440 Q233 458 214 458 L106 458 Q87 458 84 440 Z"/></clipPath><linearGradient id="cliq" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f9e597"/><stop offset="1" stop-color="#F6D860"/></linearGradient></defs><rect x="176" y="10" width="22" height="196" rx="11" transform="rotate(8 187 108)" fill="#C99700"/><path d="M62 178 L258 178 L236 440 Q233 458 214 458 L106 458 Q87 458 84 440 Z" fill="#ffffff" fill-opacity=".62" stroke="#3b2a22" stroke-opacity=".14" stroke-width="3"/><g clip-path="url(#cclip)"><rect x="40" y="236" width="240" height="240" fill="url(#cliq)"/><path d="M40 236 Q70 216 100 236 T160 236 T220 236 T280 236 V258 H40 Z" fill="#fdf7df"/><circle cx="110" cy="442" r="13" fill="#fff1a8"/><circle cx="106" cy="437" r="3.6" fill="#fff" opacity=".55"/><circle cx="138" cy="442" r="13" fill="#ffffff"/><circle cx="134" cy="437" r="3.6" fill="#fff" opacity=".55"/><circle cx="166" cy="442" r="13" fill="#fff1a8"/><circle cx="162" cy="437" r="3.6" fill="#fff" opacity=".55"/><circle cx="194" cy="442" r="13" fill="#ffffff"/><circle cx="190" cy="437" r="3.6" fill="#fff" opacity=".55"/><circle cx="222" cy="440" r="13" fill="#fff1a8"/><circle cx="218" cy="435" r="3.6" fill="#fff" opacity=".55"/><circle cx="124" cy="418" r="13" fill="#ffffff"/><circle cx="120" cy="413" r="3.6" fill="#fff" opacity=".55"/><circle cx="152" cy="418" r="13" fill="#fff1a8"/><circle cx="148" cy="413" r="3.6" fill="#fff" opacity=".55"/><circle cx="180" cy="418" r="13" fill="#ffffff"/><circle cx="176" cy="413" r="3.6" fill="#fff" opacity=".55"/><circle cx="208" cy="417" r="13" fill="#fff1a8"/><circle cx="204" cy="412" r="3.6" fill="#fff" opacity=".55"/><circle cx="138" cy="394" r="13" fill="#ffffff"/><circle cx="134" cy="389" r="3.6" fill="#fff" opacity=".55"/><circle cx="166" cy="394" r="13" fill="#fff1a8"/><circle cx="162" cy="389" r="3.6" fill="#fff" opacity=".55"/><circle cx="194" cy="393" r="13" fill="#ffffff"/><circle cx="190" cy="388" r="3.6" fill="#fff" opacity=".55"/><rect x="80" y="196" width="14" height="236" rx="7" fill="#fff" opacity=".4" transform="rotate(5 87 314)"/></g><path d="M52 182 Q52 122 160 112 Q268 122 268 182 Z" fill="#ffffff" fill-opacity=".78" stroke="#3b2a22" stroke-opacity=".14" stroke-width="3"/><rect x="42" y="172" width="236" height="20" rx="10" fill="#ffffff" stroke="#3b2a22" stroke-opacity=".14" stroke-width="3"/><circle cx="124" cy="328" r="9.5" fill="#3b2a22"/><circle cx="196" cy="328" r="9.5" fill="#3b2a22"/><circle cx="127.5" cy="324.5" r="3.4" fill="#fff"/><circle cx="199.5" cy="324.5" r="3.4" fill="#fff"/><path d="M147 344 Q160 360 173 344" stroke="#3b2a22" stroke-width="5.5" fill="none" stroke-linecap="round"/><ellipse cx="100" cy="347" rx="15" ry="9" fill="#ff8fa3" opacity=".55"/><ellipse cx="220" cy="347" rx="15" ry="9" fill="#ff8fa3" opacity=".55"/></svg></div><div class="pname">翻译官</div><div class="pline">再复杂的事，到你这儿都能变成别人听得懂、愿意转给别人的几句话。你最亮的时候，是把一个想透的东西讲给很多人听。</div><div class="milk">我的奶茶人格 · <b>蜂蜜柚柚</b>　“三分糖，慢慢喝”</div><div class="chips"><span>开拓</span><span>人</span><span>长周期</span><span>独立</span></div></div><div class="wow"><b>最意外的一点</b><p>大家都夸你会照顾人，可真正让你来劲的，是把一件事讲明白。照顾人是你练出来的本事，讲明白才是你自己的东西，而它现在几乎闲着。</p></div><div class="sec"><b>你的发动机</b><p>你把一个东西想透，再讲到别人点头，这件事本身就让你满足。被人听懂、被人转发，是你最直接的燃料。</p></div><div class="sec"><b>你的本事</b><div class="sk"><span class="n">讲清</span><span class="t">一句话、一个比方，把复杂的事说透。</span><span class="eng">发动机</span></div><div class="sk"><span class="n">琢磨门道</span><span class="t">总想知道一件事为什么会这样。</span><span class="eng">发动机</span></div><div class="sk"><span class="n">读懂人</span><span class="t">谁慌了、谁不开心，你第一个看出来。</span></div><div class="sk"><span class="n">看准选择</span><span class="t">几个选项里，你能看出哪个更靠谱。</span></div><div class="sknote">标着“发动机”的是让你来劲的本事；另外两样你做得好，但不怎么让你来劲。</div></div><div class="sec"><b>你的底色</b><p>你在一个变动多、人情近、要搭把手的环境里长大，所以很早就学会察言观色、照顾别人。这是那时候需要的；把事情想透、讲清楚，才是你自己长出来的。</p></div><div class="sec"><b>要留意</b><ul><li>容易被拉回“情绪垃圾桶”的位置，做完很累。</li><li>想透了才开口，好东西常常放在心里没讲出去。</li></ul></div><div class="sec go"><b>往哪走</b><div class="pos">你的位置：把复杂的东西讲给更多人听。</div><div class="lb">适合的职业</div><div class="pills"><span>知识类内容创作者</span><span>培训师 / 课程设计师</span><span>产品或品牌文案策划</span><span>科普编辑</span><span>用户研究员</span></div><div class="lb">适合的城市</div><div class="pills"><span>成都</span><span>武汉</span><span>杭州</span><span>大理</span></div></div><details class="appx"><summary>这些结论是怎么来的（点开看）</summary><p>报告完全根据你在 46 道选择题里的选择推出来，下面是每部分对应的题。</p><h4>画像</h4><ul><li>第18题（开会没结论）选了A：用一句话把大家绕来绕去的东西说清楚</li><li>第27题（给长辈解释新东西）选了A：打个比方，几句话说明白</li><li>第10题（怎样算“值了”）选了D：我说的话、写的东西被很多人转发</li></ul><h4>最意外的一点</h4><ul><li>第9题（朋友最常找你干什么）选了D：找你聊心事</li><li>第21题（常被夸但做完想躺平）选了B：照顾大家的情绪</li><li>第40题（最想交出去的事）选了A：安抚、照顾别人的情绪</li><li>第43题（用得太少的本事）选了B：把复杂的事讲明白</li></ul><h4>发动机</h4><ul><li>第4题（十岁时最常玩的）选了C：编故事、给人讲故事</li><li>第26题（做完反而更有精神）选了C：写完或讲完一个自己满意的东西</li><li>第30题（上学时主动做的事）选了C：参加演讲、辩论或者写稿</li><li>第41题（多出一个周末想补上的）选了B：写点、拍点、讲点东西发出去</li></ul><h4>本事</h4><ul><li>讲清：第13、18、22、27、35题</li><li>琢磨门道：第14、19、36题</li><li>读懂人：第6、9、16、23、37题</li><li>看准选择：第28、39题</li></ul><h4>底色</h4><ul><li>第3题（小时候的晚饭）选了B：看大人忙不忙，时早时晚</li><li>第24题（过年过节的走动）选了A：一大家子亲戚，走动多，礼数也多</li><li>第38题（小时候家里的活儿）选了A：我得帮着干，或者照顾弟弟妹妹</li><li>第4题（十岁时最常玩的）选了C：编故事、给人讲故事</li></ul><h4>要留意</h4><ul><li>第21、40题：照顾情绪最累</li><li>第25题偏慢慢打底子，第33、42题偏一个人做成</li></ul><h4>8 项本事的证据多少</h4><div class="legend"><i style="background:#C99700"></i>做得好<i style="background:#f2b84b"></i>来劲、想用</div><div class="abrow"><span class="n">讲清讲透</span><div class="bars"><div class="bar2"><i style="width:100%;background:#C99700"></i></div><div class="bar2"><i style="width:100%;background:#f2b84b"></i></div></div></div><div class="abrow"><span class="n">看出门道</span><div class="bars"><div class="bar2"><i style="width:50%;background:#C99700"></i></div><div class="bar2"><i style="width:75%;background:#f2b84b"></i></div></div></div><div class="abrow"><span class="n">读人照顾</span><div class="bars"><div class="bar2"><i style="width:100%;background:#C99700"></i></div><div class="bar2"><i style="width:3%;background:#f2b84b"></i></div></div></div><div class="abrow"><span class="n">拍板判断</span><div class="bars"><div class="bar2"><i style="width:50%;background:#C99700"></i></div><div class="bar2"><i style="width:3%;background:#f2b84b"></i></div></div></div><div class="abrow"><span class="n">冒出点子</span><div class="bars"><div class="bar2"><i style="width:3%;background:#C99700"></i></div><div class="bar2"><i style="width:25%;background:#f2b84b"></i></div></div></div><div class="abrow"><span class="n">拉人起势</span><div class="bars"><div class="bar2"><i style="width:3%;background:#C99700"></i></div><div class="bar2"><i style="width:3%;background:#f2b84b"></i></div></div></div><div class="abrow"><span class="n">理顺落地</span><div class="bars"><div class="bar2"><i style="width:3%;background:#C99700"></i></div><div class="bar2"><i style="width:3%;background:#f2b84b"></i></div></div></div><div class="abrow"><span class="n">磨到极致</span><div class="bars"><div class="bar2"><i style="width:3%;background:#C99700"></i></div><div class="bar2"><i style="width:3%;background:#f2b84b"></i></div></div></div><h4>为什么是这几座城市</h4><p>城市特点是常识印象，没有联网核实；不是建议搬家，有机会可以去住一阵试试。</p><ul><li>成都：你的“讲清讲透”和“看出门道”在这里有用武之地：我印象里内容、演出相关的事多；你偏开拓（第 1、15、45 题），我印象里这里外来的年轻人多，新东西冒得快；你先看人（第 5、20、23 题），我印象里这里夜里热闹，人和人碰得到</li><li>武汉：你的“讲清讲透”和“看出门道”在这里有用武之地：我印象里教育、科技相关的事多；你先看人（第 5、20、23 题），我印象里这里夜里热闹，人和人碰得到</li><li>杭州：你的“讲清讲透”和“看出门道”在这里有用武之地：我印象里内容、科技相关的事多；你偏开拓（第 1、15、45 题），我印象里这里外来的年轻人多，新东西冒得快；你想自己搞定（第 11、33、42 题），我印象里这里边界感清楚，不太被人情牵着走</li><li>大理：你在人情很近的环境里长大（第 24、31 题），这里我印象里是陌生人社会，可以松一口气；你小时候的日子常有变数（第 3、12 题），这里我印象里节奏慢、日子有准点；你从小要照顾人（第 38 题），这里我印象里安静、松，不用总当那个张罗的人</li></ul><h4>做事风格（奶茶人格从这里来）</h4><div class="ax"><span class="l">开拓 90%</span><div class="bar"><i style="width:90%"></i></div><span class="r">10% 深耕</span></div><div class="ax"><span class="l">人 90%</span><div class="bar"><i style="width:90%"></i></div><span class="r">10% 物</span></div><div class="ax"><span class="l">快反馈 10%</span><div class="bar"><i style="width:10%"></i></div><span class="r">90% 长周期</span></div><div class="ax"><span class="l">独立 90%</span><div class="bar"><i style="width:90%"></i></div><span class="r">10% 协同</span></div><h4>和谁最搭，和谁最冲</h4><div class="mini"><b>最搭</b>🟣 芋泥啵啵：你负责开头，TA 负责把它磨到收尾</div><div class="mini"><b>最冲</b>🍇 葡萄冻冻：分工：开头交给开拓的人，收尾交给深耕的人。；重要决定前，先聊事实，再聊感受，两件事都留出时间。</div><h4>答题一致性：高</h4><p>重复题 3 道里 3 道前后一致；出现最多的选项 A 占 39%；最长连续同一选项 3 题</p><ul><li>第9题和第37题问的是同一件事，前后一致</li><li>第33题和第42题问的是同一件事，前后一致</li><li>第10题和第44题问的是同一件事，前后一致</li></ul></details><div class="foot">这份报告根据你在 46 道选择题里的选择推断而来，用来帮你看见可能性，不是心理诊断，也不预测你的未来。职业和城市是参考，没有结合最新的行业与薪资数据，做决定前请自己核实。</div></div></body></html>
