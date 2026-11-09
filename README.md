@@ -28,7 +28,21 @@
 
 这个目录就是一个标准的 Skill（入口是 `SKILL.md`）。把整个目录放进你的 AI 助手的 skills 目录里，然后对助手说“帮我测测隐藏天赋”即可。
 
-例如在 Claude Code 里：
+### 下载安装
+
+**最简单：下载 zip（Mac、Windows、Linux 都行）**
+
+1. 打开 [Releases 页面](https://github.com/yyue5578-coder/hidden-talent-finder/releases/latest)，下载 `hidden-talent-finder-v0.5.zip`。
+2. 解压，得到 `hidden-talent-finder` 文件夹。
+3. 把整个文件夹放进你的 AI 助手的 skills 目录，例如 Claude Code 是 `~/.claude/skills/`。
+
+**一行命令（macOS / Linux）**
+
+```bash
+mkdir -p ~/.claude/skills/hidden-talent-finder && curl -fsSL https://github.com/yyue5578-coder/hidden-talent-finder/archive/refs/tags/v0.5.tar.gz | tar -xz --strip-components=1 -C ~/.claude/skills/hidden-talent-finder
+```
+
+**用 git（以后可以 `git pull` 更新）**
 
 ```bash
 git clone https://github.com/yyue5578-coder/hidden-talent-finder ~/.claude/skills/hidden-talent-finder
