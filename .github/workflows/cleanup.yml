@@ -1,0 +1,21 @@
+name: remove-story-to-song
+on:
+  push:
+    paths:
+      - .github/workflows/cleanup.yml
+permissions:
+  contents: write
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Remove story-to-song (moved to yyue5578-coder/story-to-song)
+        run: |
+          set -euo pipefail
+          git rm -r --quiet story-to-song
+          git rm -r --quiet .github
+          git config user.name "yyue5578-coder"
+          git config user.email "yyue5578@gmail.com"
+          git commit -m "Remove story-to-song (moved to its own repo: yyue5578-coder/story-to-song)" -m "Assisted-by: Cindy (https://cindy.app)"
+          git push origin HEAD:main
